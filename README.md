@@ -35,3 +35,7 @@
 17. https://iopscience.iop.org/article/10.1088/0031-9155/50/15/002/meta
 
 18. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1964229/
+
+19. https://www.hindawi.com/journals/sp/si/163817/
+
+20. **https://www.researchgate.net/publication/345690146_Meta-Heuristic_Algorithms_in_Medical_Image_Segmentation_A_Review**

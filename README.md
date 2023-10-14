@@ -1,43 +1,52 @@
 # Metaheuristics-In-Healthcare
+## Metaheuristics for feature selection for medical applications
 
-Analysing several research papers on evolutionary algorithms.
+1. https://ieeexplore.ieee.org/abstract/document/7346674
 
-1. https://www.sciencedirect.com/science/article/pii/S0045790616300532?casa_token=1gtCtKW78N8AAAAA:QHOpF6v91N5lYjAx5SiL5CZTEsHD2cMQjL_S8phoSxMvnYFKdYGQpz8z6SC6yzwMyewKvt25Sg
+2. https://www.sciencedirect.com/science/article/pii/S0010482522001366?casa_token=VYMiTi3YGWsAAAAA:HZShNcM_X8rue-ugqoJGD4z0hLMZEk9WnuXdd_oosb_Ff2RVyn5hdKD9u9lyvRp_4HNhnPZ7cQ
 
-2. https://www.sciencedirect.com/science/article/pii/S0141933122001594?casa_token=mfT7NsOq4ikAAAAA:w1lvEbTlIMl9ACcP2bY67aHPV-RYNzrcLj478cToAkD5MIB_Rf7T3a1bHTmrYOyNkGHbFFNyOw
+3. https://ieeexplore.ieee.org/abstract/document/8589392?casa_token=icf6Mt5HTZYAAAAA:szFH23weZbYTbypgZTA6SLpaV0Qrb7cLxgCZt0mDhxIQCodbTIrGqbuQPXTEBE_rLyj4MDitf13c
 
-3. https://link.springer.com/article/10.1007/s11063-022-11055-6
+4. https://www.mdpi.com/2076-3417/12/19/9710
 
-4. https://books.google.co.in/books?hl=en&lr=&id=IYPZDwAAQBAJ&oi=fnd&pg=PR5&dq=medical+applications+of+metaheuristic+algorithms&ots=ajcPsAp9nI&sig=1LaMV3L_laWzbInOKFu7pymRZRk&redir_esc=y#v=onepage&q=medical%20applications%20of%20metaheuristic%20algorithms&f=false
+5. https://ieeexplore.ieee.org/abstract/document/6871693
 
-5. https://www.researchgate.net/profile/Ibrahim-Aljarah/publication/339925501_An_Efficient_Moth_Flame_Optimization_Algorithm_using_Chaotic_Maps_for_Feature_Selection_in_the_Medical_Applications/links/5e85085b92851c2f52743083/An-Efficient-Moth-Flame-Optimization-Algorithm-using-Chaotic-Maps-for-Feature-Selection-in-the-Medical-Applications.pdf
+6. https://www.researchgate.net/profile/Ibrahim-Aljarah/publication/339925501_An_Efficient_Moth_Flame_Optimization_Algorithm_using_Chaotic_Maps_for_Feature_Selection_in_the_Medical_Applications/links/5e85085b92851c2f52743083/An-Efficient-Moth-Flame-Optimization-Algorithm-using-Chaotic-Maps-for-Feature-Selection-in-the-Medical-Applications.pdf
 
-6. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4678452/
+7. https://www.sciencedirect.com/science/article/pii/S092523121730807X
 
-7. https://www.sciencedirect.com/science/article/pii/S0957417421017103?casa_token=-0FWTk5MMTkAAAAA:gbt9EJ582JD-FYImG_d4PL3pwjLa6p_yGZgosGPcTt_RXWJht6kRkE2X9aexJp2-81VGWCKjHw
+8. https://www.sciencedirect.com/science/article/pii/S0031320321002661#sec0003
 
-8. https://www.sciencedirect.com/science/article/pii/S0010482522001366?casa_token=VYMiTi3YGWsAAAAA:HZShNcM_X8rue-ugqoJGD4z0hLMZEk9WnuXdd_oosb_Ff2RVyn5hdKD9u9lyvRp_4HNhnPZ7cQ
+********************************************************************************************************************************************************************************************
+9. https://ieeexplore.ieee.org/abstract/document/9311206
+A Novel Wrapper–Based Feature Selection for Early Diabetes Prediction Enhanced With a Metaheuristic
 
-9. https://journalofbigdata.springeropen.com/articles/10.1186/s40537-020-00406-6
+10. https://link.springer.com/article/10.1007/s10586-018-2416-4#Sec3
+An optimized feature selection based on genetic approach and support vector machine for heart disease
 
-10. https://ieeexplore.ieee.org/abstract/document/8589392?casa_token=icf6Mt5HTZYAAAAA:szFH23weZbYTbypgZTA6SLpaV0Qrb7cLxgCZt0mDhxIQCodbTIrGqbuQPXTEBE_rLyj4MDitf13c
+11. https://d1wqtxts1xzle7.cloudfront.net/51133098/130_Paper_310716206_IJCSIS_Camera_Ready_pp._1243-1247-libre.pdf?1483206167=&response-content-disposition=inline%3B+filename%3DFeature_Selection_Based_on_Whale_Optimiz.pdf&Expires=1695765493&Signature=UDsuIBpj-Pg5i2wsm9GsuG7NjQEJFeJ2s7wN8EX2wrjGA8ey8WcQNwGAsmC74Z~K6LMTElBiV5gSKZA5TKEwPHfLVdQGoJQa12xR0cYSik801X35L-JGermtWzz38NkVfPguurYcBJhEjCu65Nh5AjcJDcljHC7n~6BVDGCTmU5khk9aUx0rLI73E8WKakTZiHs~Hv9Y3EVkuIE73Kap3voXrFKIWU38hKN4Kn6ufB0EBf8I5v1Exz8g~a0d2TQ9Qd~QOeDhFy4yH3rYSPuSXKzhVj0DMg47XL3Qx5KlyheH5A~LV~O1uA-fow3FWBP7SLfJSwht1jpQQ~t4SywMlw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+Feature Selection Based on Whale Optimization Algorithm for Diseases Diagnosis
 
-11. http://annalsofrscb.ro/index.php/journal/article/view/482
+12. https://ieeexplore.ieee.org/abstract/document/9217516
+An Improved Harris Hawks Optimization Algorithm With Simulated Annealing for Feature Selection in the Medical Field
 
-12. https://ieeexplore.ieee.org/abstract/document/6724173?casa_token=pndfGUnujGYAAAAA:sBrvlllP4pVk23T8tPWrDJw1GEQ0IJHdmUKJ0OxI01qgY-CKvWmx-Yn2piByOWXzn3ydYUI7ruHU
+13. https://www.sciencedirect.com/science/article/pii/S0010482522006126#sec8
+Enhanced whale optimization algorithm for medical feature selection: A COVID-19 case study
 
-13. https://ieeexplore.ieee.org/abstract/document/10102924?casa_token=h9VLGpOL_7wAAAAA:09W9vcvDDr2Bucrrsit200pNMeKtYmaVxT3RZ17xSxSnsygCJ2HTbG_8zRoj6n1ysw2eDPblBjqa
+14. https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=5ef9d429c628b9584424290a48ce99e911fd69bd
+Feature Selection on Classification of Medical Datasets based on Particle Swarm Optimization
 
-14. https://downloads.hindawi.com/journals/cmmm/2021/5990999.pdf
+15. https://www.hindawi.com/journals/cmmm/2017/9512741/
+An Enhanced Grey Wolf Optimization Based Feature Selection Wrapped Kernel Extreme Learning Machine for Medical Diagnosis
 
-15. https://link.springer.com/article/10.1007/s10916-020-01608-4
+16. https://link.springer.com/article/10.1007/s00521-017-2988-6
+Feature selection via a novel chaotic crow search algorithm
 
-16. https://ieeexplore.ieee.org/abstract/document/4798001?casa_token=IWOHo0vhOTwAAAAA:JMD1FB80YE2brUqDmDSK8nTWdqUqiPEKYhu_vjd0U6dlGb-cmypiDhcddIjxY5Ts7crO85lf3LS2
+https://www.cs.bham.ac.uk/~xin/papers/FeatureSelectionAccepted.pdf------------?
 
-17. https://iopscience.iop.org/article/10.1088/0031-9155/50/15/002/meta
+https://link.springer.com/article/10.1007/s11831-022-09853-1#Sec3-------------?
 
-18. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1964229/
+https://ieeexplore.ieee.org/abstract/document/9344597--------------?
 
-19. https://www.hindawi.com/journals/sp/si/163817/
+https://link.springer.com/article/10.1007/s11831-022-09853-1--------------?
 
-20. **https://www.researchgate.net/publication/345690146_Meta-Heuristic_Algorithms_in_Medical_Image_Segmentation_A_Review**

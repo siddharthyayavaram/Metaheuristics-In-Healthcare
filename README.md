@@ -68,12 +68,3 @@ An Enhanced Grey Wolf Optimization Based Feature Selection Wrapped Kernel Extrem
 
 16. https://link.springer.com/article/10.1007/s00521-017-2988-6
 Feature selection via a novel chaotic crow search algorithm
-
-https://www.cs.bham.ac.uk/~xin/papers/FeatureSelectionAccepted.pdf------------?
-
-https://link.springer.com/article/10.1007/s11831-022-09853-1#Sec3-------------?
-
-https://ieeexplore.ieee.org/abstract/document/9344597--------------?
-
-https://link.springer.com/article/10.1007/s11831-022-09853-1--------------?
-

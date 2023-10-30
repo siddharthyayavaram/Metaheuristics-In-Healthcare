@@ -1,6 +1,31 @@
 # Metaheuristics-In-Healthcare
 ## Metaheuristics for feature selection for medical applications
 
+We briefly explain a high-level overview of the common structure and iterative nature of many
+of the algorithms followed in the research papers we analyse.
+The algorithms typically start by initializing a population of potential solutions. In each
+iteration, a subset of solutions is selected based on their fitness, modified to explore and exploit
+the solution space, and then evaluated for their fitness.
+The best solutions are retained, and the process repeats until termination criteria are met. This
+is analogous to the principle of “Survival of the Fittest” proposed by Charles Darwin. Only the
+animals best suited to fully exploit the environment are allowed to survive.
+These algorithms strike a balance between exploration and exploitation to efficiently search for
+optimal or near-optimal solutions, drawing inspiration from animal behaviours like foraging,
+flocking, or genetic evolution.
+Although specific mechanisms may vary among algorithms, this iterative blueprint is a
+fundamental characteristic they share.
+Another topic very important in the field of artificial intelligence is how the ethical
+considerations in feature selection are paramount in ensuring the responsible and fair use of
+machine learning models. These considerations encompass the mitigation of bias and the
+promotion of fairness in feature selection, transparency in the decision-making process, and
+the protection of privacy and data security.
+Ethical and explainable artificial intelligence is a field whose importance grows daily with the
+advent of AI in our daily lives.
+Moreover, ethical feature selection is an ongoing process that necessitates continuous
+monitoring and adaptation to evolving ethical concerns and societal norms. Ultimately,
+integrating these ethical principles into the feature selection process is fundamental to building
+models that are both effective and morally sound.
+
 1. https://ieeexplore.ieee.org/abstract/document/7346674
 
 2. https://www.sciencedirect.com/science/article/pii/S0010482522001366?casa_token=VYMiTi3YGWsAAAAA:HZShNcM_X8rue-ugqoJGD4z0hLMZEk9WnuXdd_oosb_Ff2RVyn5hdKD9u9lyvRp_4HNhnPZ7cQ

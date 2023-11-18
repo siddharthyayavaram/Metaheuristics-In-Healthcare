@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Selection using Metaheuristic Algorithms - AI Term Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Feature Selection using Metaheuristics</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="algo1.html">Simulated Annealing</a>
+        <a href="algo2.html">Genetic Algorithm</a>
+        <a href="algo3.html">Particle Swarm Optimization</a>
+        <a href="algo4.html">Whale Optimization Algorithm</a>
+        <a href="algo5.html">Differential Evolution</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to the AI Term Project [Group 38] </h2>
+        <p>This website presents different implementations of metaheuristic algorithms for feature selection in image classification tasks.</p>
+        <p>Siddharth Yayavaram&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Roll No: 2021A7PS3116H</p>
+        <p>Arnav Yayavaram&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Roll No: 2021A7PS3117H</p>
+        
+
+    <h1>Feature Selection Comparative Analysis</h1>
+
+    <p>We aim to reduce the number of features required for classification using various metaheuristic algorithms.</p>
+
+    <p>We use the MNIST dataset which is made up of 70000 handwritten digits, formatted as 28 x 28 pixel images.</p>
+
+    <p>They have been converted to 1-D arrays of size 28*28 = 784 values for each image.</p>
+
+    <p>We will use a random forest classifier, and use accuracy as our objective function.</p>
+
+    <p>Our selected features will be in the format of a 1-D array consisting of 'n' elements, where 'n' is the number of features out of 784 that we require for the model.</p>
+
+    <p>We initialize the population and initial individuals where required by randomly selecting 'n' values ranging from 0 to 783, which will act as the selected column values.</p>
+
+    <p>Our final solution is an array of 'n' elements with each element representing a column or a feature from the dataset, selected using our metaheuristic algorithms.</p>
+
+    <p>We finally compare the accuracy obtained by training the model using all 784 features and measure accuracy. Similarly, we do so using our selected features.</p>
+
+    <p>We observe that both models achieve very similar accuracy, with the model using our selected features taking much less time to train.</p>
+
+    <p>As an additional test, we initialize random values and train a model using these columns. The accuracy is significantly lower, suggesting that our algorithms are successful.</p>
+
+    <br>
+    <br>
+    <p>The MNIST dataset contains images of this form </p>
+
+    <!-- Image Section -->
+    <img src="\images\example.png" alt="Simulated Annealing Image" width="200" height="200">
+
+    <p>When we randomly initialize pixel values using the following code: </p>
+
+    <pre>
+        <code>
+            current_solution = np.random.choice(X.shape[1], n_feature, replace=False)
+        </code>
+    </pre>
+
+    <p> It selects: </p>
+
+    <pre>
+        <code>
+            Randomly Selected Features: [677  72 761 639 137 196 552 700 511 275 481 279 218 
+            722 504 152 399 782 241 648 526 281 122 656   2  26 153 548]
+        </code>
+    </pre>
+
+    <img src="\images\sim_anneal_random.png" alt="Simulated Annealing Image" width="200" height="200">
+
+    <p>We only get accuracy of around: </p>
+
+    <pre>
+        <code>
+            0.5840952380952381
+        </code>
+    </pre>
+    </section>
+<!-- 
+    <footer>
+        <p>&copy; 2023 Feature Selection AI Project</p>
+    </footer> -->
+</body>
+
+</html>

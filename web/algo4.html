@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whale Optimization Algorithm - Feature Selection using Metaheuristic Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Whale Optimization Algorithm</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="algo1.html">Simulated Annealing</a>
+        <a href="algo2.html">Genetic Algorithm</a>
+        <a href="algo3.html">Particle Swarm Optimization</a>
+        <a href="algo4.html">Whale Optimization Algorithm</a>
+        <a href="algo5.html">Differential Evolution</a>
+    </nav>
+
+    <section id="algorithm2">
+        <h2>Introduction to Whale Optimization Algorithm</h2>
+        <p>The Whale Optimization Algorithm is a nature-inspired optimization technique used to find approximate solutions to complex problems. This algorithm is inspired by the social behavior of whales, particularly their hunting strategy. In the context of feature selection, the Whale Optimization Algorithm evolves a population of candidate solutions (chromosomes) towards an optimal solution.</p>
+    
+        <h2>Implementation Details</h2>
+        <p>In the provided implementation, the Whale Optimization Algorithm is applied for feature selection in image classification tasks. Here's an overview of the algorithm:</p>
+    
+        <ol>
+            <li><strong>Fitness Calculation:</strong> The fitness of each individual is computed using the `fitness_rf_classifier` function, which evaluates the accuracy of a RandomForestClassifier on the selected feature set.</li>
+            <li><strong>Optimization Process:</strong> The algorithm involves random exploration and exploitation using coefficients A, a, C, l, and p. Individuals are updated based on fitness comparison, promoting the selection of better feature sets.</li>
+            <li><strong>Generations Loop:</strong> The main loop runs for a predefined number of iterations, updating the population in each iteration to improve feature selection.</li>
+        </ol>
+    
+        <h2>Results</h2>
+
+    
+        <p>The final selected features are printed:</p>
+    
+        <pre>
+            <code>
+                Selected Features: [132 240 321 301 327 408 291 220 222 432 238 284 573 147 289
+                 409 405 381 483 514 307 281 601 516 459 368 271 491]
+            </code>
+        </pre>
+    
+        <p>Using the selected features, a RandomForestClassifier is trained, and its accuracy on the test set is calculated:</p>
+    
+        <pre>
+            <code>
+                X_train_subset = X_train.iloc[:, selected_features]
+                X_test_subset = X_test.iloc[:, selected_features]
+    
+                clf = RandomForestClassifier(n_estimators=100, random_state=42)
+                clf.fit(X_train_subset, y_train)
+                y_pred = clf.predict(X_test_subset)
+                acc = accuracy_score(y_test, y_pred)
+            </code>
+        </pre>
+    
+        <p>The final accuracy of the model is printed:</p>
+    
+        <pre>
+            <code>
+                0.845643
+            </code>
+        </pre>
+    
+        <p>Taking just : </p>
+    
+        <pre>
+            <code>
+                17.6 seconds
+            </code>
+        </pre>
+    
+        <h2>Visual Representation</h2>
+    
+        <p>We highlight the selected pixels which represent features in our problem to represent the learning capability of the algorithm in understanding the important features for a quicker and less computationally intensive classification</p>
+    
+        <!-- Image Section -->
+        <img src="\images\woa.png" alt="Whale Optimization Algorithm Image" width="200" height="200">
+    
+        <!-- You can add more content here -->
+    
+    </section>
+
+    <!-- <footer>
+        <p>&copy; 2023 Feature Selection AI Project</p>
+    </footer> -->
+</body>
+
+</html>

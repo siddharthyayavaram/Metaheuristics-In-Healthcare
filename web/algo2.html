@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic Algorithm - Feature Selection using Metaheuristic Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Genetic Algorithm</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="algo1.html">Simulated Annealing</a>
+        <a href="algo2.html">Genetic Algorithm</a>
+        <a href="algo3.html">Particle Swarm Optimization</a>
+        <a href="algo4.html">Whale Optimization Algorithm</a>
+        <a href="algo5.html">Differential Evolution</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section id="algorithm2">
+        <h2>Introduction to Genetic Algorithm</h2>
+        <p>The Genetic Algorithm is an optimization technique inspired by the process of natural selection. It is commonly used for finding approximate solutions to optimization and search problems. In the context of feature selection, the Genetic Algorithm is applied to evolve a population of candidate solutions (chromosomes) towards an optimal solution.</p>
+
+        <h2>Implementation Details</h2>
+        <p>In the provided implementation, the Genetic Algorithm is used for feature selection in image classification tasks. Here's an overview of the algorithm:</p>
+
+        <ol>
+            <li><strong>Fitness Calculation:</strong> The `cal_pop_fitness`, `fit_svm`, and `fit_xgboost` functions compute the fitness of each individual based on its feature set. The fitness metric is accuracy, determined by evaluating the performance on a machine learning task.</li>
+            <li><strong>Selection:</strong> The `select_mating_pool` function identifies the best individuals in the current population based on their fitness. These individuals are chosen as parents for the next generation.</li>
+            <li><strong>Crossover:</strong> The `crossover` function performs one-point crossover, a genetic operation that combines features from two parents to produce offspring. This encourages exploration of different feature combinations.</li>
+            <li><strong>Mutation:</strong> The `mutation` function introduces small random changes to the offspring's feature sets. This promotes diversity in the population and prevents premature convergence to suboptimal solutions.</li>
+            <li><strong>Generations Loop:</strong> The main loop runs for a predefined number of generations. In each iteration, it evaluates the fitness, selects parents, performs crossover, introduces mutations, and forms the next generation.</li>
+            <li><strong>Population Update:</strong> The new population is constructed by combining selected parents with mutated offspring. This process allows for the retention of well-performing individuals and the introduction of potentially improved features.</li>
+        </ol>
+
+        <h2>Results</h2>
+        <p>The algorithm's progress is tracked by printing the accuracy of every individual in the population for each generation</p>
+
+        <pre>
+            <code>
+                [0.7366666666666667, 0.8076666666666666, 0.7496666666666667, ...]
+                Generation :  0
+                
+                [0.8363333333333334, 0.8123333333333334, 0.8103333333333333, ...]
+                Generation :  1
+                
+                [0.84, 0.84, 0.8363333333333334, 0.8363333333333334, ...]
+                Generation :  2
+                
+                [0.8473333333333334, 0.8473333333333334, 0.8433333333333334, ...]
+                Generation :  3
+                
+                [0.8513333333333334, 0.8506666666666667, 0.8486666666666667, ...]
+                Generation :  4
+                
+                [0.858, 0.8513333333333334, 0.8513333333333334, ...]
+                Generation :  5
+                
+                [0.858, 0.858, 0.858, ...]
+                Generation :  6
+                .
+                .
+                . 
+            </code>
+        </pre>
+
+        <!-- Image Section -->
+        <img src="\images\ga_accuracy.png" alt="Genetic Algorithm Image" width="467" height="300">
+
+        <p>The final selected features are printed:</p>
+
+        <pre>
+            <code>
+                Selected Features: [669, 373, 550, 727, 213, 161, 569, 349, 270, 433, 404, 148, 459,
+                288, 346, 647, 209, 436, 256, 412, 323, 443, 495, 318, 236, 357,
+                247, 486]
+            </code>
+        </pre>
+
+        <p>Using the selected features, a RandomForestClassifier is trained, and its accuracy on the test set is calculated:</p>
+
+        <pre>
+            <code>
+                X_train_subset = X_train.iloc[:, selected_features]
+                X_test_subset = X_test.iloc[:, selected_features]
+
+                clf = RandomForestClassifier(n_estimators=100, random_state=42)
+                clf.fit(X_train_subset, y_train)
+                y_pred = clf.predict(X_test_subset)
+                acc = accuracy_score(y_test, y_pred)
+            </code>
+        </pre>
+
+        <p>The final accuracy of the model is printed:</p>
+
+        <pre>
+            <code>
+                0.8866190476190476
+            </code>
+        </pre>
+
+        <p>Taking just : </p>
+
+        <pre>
+            <code>
+                20.8 seconds
+            </code>
+        </pre>
+
+
+        <h2>Visual Representation</h2>
+    
+        <p>We highlight the selected pixels which represent features in our problem to represent the learning capability of the algorithm in understanding the important features for a quicker and less computationally intensive classification</p>
+
+        <!-- Image Section -->
+        <img src="\images\ga.png" alt="Genetic Algorithm Image" width="200" height="200">
+
+        <!-- You can add more content here -->
+
+    </section>
+
+    <!-- Footer Section
+    <footer>
+        <p>&copy; 2023 Feature Selection AI Project</p>
+    </footer> -->
+</body>
+
+</html>

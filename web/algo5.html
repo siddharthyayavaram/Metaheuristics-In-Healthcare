@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differential Evolution - Feature Selection using Metaheuristic Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Differential Evolution</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="algo1.html">Simulated Annealing</a>
+        <a href="algo2.html">Genetic Algorithm</a>
+        <a href="algo3.html">Particle Swarm Optimization</a>
+        <a href="algo4.html">Whale Optimization Algorithm</a>
+        <a href="algo5.html">Differential Evolution</a>
+    </nav>
+
+    <section id="algorithm_de">
+        <h2>Introduction to Differential Evolution Algorithm</h2>
+        <p>The Differential Evolution Algorithm is an optimization technique used to find approximate solutions to complex problems. This algorithm is inspired by the process of natural selection and genetics.</p>
+        <p>While Differential Evolution (DE) and Genetic Algorithms (GA) both fall under the umbrella of evolutionary algorithms, they differ in their approach to optimization. DE, inspired by natural selection and genetics, focuses on the mutation, crossover, and selection of individuals within a population to improve solutions. DE employs vector-based operations, such as differential mutation and binomial crossover, making it particularly effective for continuous optimization problems. On the other hand, Genetic Algorithms use a population of candidate solutions represented as chromosomes and apply crossover and mutation operations to evolve towards optimal solutions. GAs are versatile and widely applicable, suitable for both discrete and continuous optimization tasks. The key distinction lies in the specific mechanisms and representations used by each algorithm, influencing their performance in different problem domains.</p>
+
+        <h2>Implementation Details</h2>
+        <p>In the provided implementation, the Differential Evolution Algorithm is applied for feature selection in image classification tasks. Here's an overview of the algorithm:</p>
+    
+        <ol>
+            <li><strong>Fitness Calculation:</strong> The fitness of each individual is computed using the `fitness_rf_classifier` function, which evaluates the accuracy of a RandomForestClassifier on the selected feature set.</li>
+            <li><strong>Optimization Process:</strong> The algorithm involves the initialization of a population using a normal distribution, mutation, crossover, and selection based on fitness comparison.</li>
+            <li><strong>Generations Loop:</strong> The main loop runs for a predefined number of iterations, updating the population in each iteration to improve feature selection.</li>
+        </ol>
+    
+        <h2>Results</h2>
+    
+        <p>The final selected features are printed:</p>
+    
+        <pre>
+            <code>
+                459, 371, 409, 514, 305, 262, 295, 439, 326, 291, 588, 365, 307, 
+                290, 302, 254, 515, 324, 219, 348, 290, 149, 119, 483, 406, 466, 358, 213
+            </code>
+        </pre>
+    
+        <p>Using the selected features, a RandomForestClassifier is trained, and its accuracy on the test set is calculated:</p>
+    
+        <pre>
+            <code>
+                X_train_subset = X_train.iloc[:, selected_features]
+                X_test_subset = X_test.iloc[:, selected_features]
+    
+                clf = RandomForestClassifier(n_estimators=100, random_state=42)
+                clf.fit(X_train_subset, y_train)
+                y_pred = clf.predict(X_test_subset)
+                acc = accuracy_score(y_test, y_pred)
+            </code>
+        </pre>
+    
+        <p>The final accuracy of the model is printed:</p>
+    
+        <pre>
+            <code>
+                0.8682857142857143
+            </code>
+        </pre>
+
+        <p>Computed in : </p>
+    
+        <pre>
+            <code>
+                20.0 seconds
+            </code>
+        </pre>
+    
+        <h2>Visual Representation</h2>
+    
+        <p>We highlight the selected pixels which represent features in our problem to represent the learning capability of the algorithm in understanding the important features for a quicker and less computationally intensive classification</p>
+    
+        <!-- Image Section -->
+        <img src="\images\de.png" alt="Differential Evolution Algorithm Image" width="200" height="200">
+    
+        <!-- You can add more content here -->
+    </section>
+
+    <!-- <footer>
+        <p>&copy; 2023 Feature Selection AI Project</p>
+    </footer> -->
+</body>
+
+</html>

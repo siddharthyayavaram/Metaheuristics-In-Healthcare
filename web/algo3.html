@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Swarm Optimization - Feature Selection using Metaheuristic Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Particle Swarm Optimization</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="algo1.html">Simulated Annealing</a>
+        <a href="algo2.html">Genetic Algorithm</a>
+        <a href="algo3.html">Particle Swarm Optimization</a>
+        <a href="algo4.html">Whale Optimization Algorithm</a>
+        <a href="algo5.html">Differential Evolution</a>
+    </nav>
+    <!-- Main Content Section -->
+    <section id="algorithm3">
+        <h2>Introduction to Particle Swarm Optimization</h2>
+        <p>Particle Swarm Optimization (PSO) is an optimization technique inspired by the social behavior of birds flocking or fish schooling. It simulates the movement of particles in a search space to find optimal solutions. In feature selection, PSO evolves a population of potential feature subsets towards an optimal configuration.</p>
+        
+        <h2>Implementation Details</h2>
+        <p>In the context of feature selection for image classification tasks, the PSO-based approach is employed:</p>
+        
+        <ol>
+            <li><strong>Fitness Calculation:</strong> The algorithm evaluates fitness using a random forest classifier on individual feature subsets. This fitness score represents the accuracy achieved by each particle on a classification task.</li>
+            <li><strong>Particle Movement:</strong> Each particle, representing a feature subset, adjusts its position based on its historical best (personal best) and the overall best (global best) positions found so far. This movement encourages exploration and exploitation of the search space.</li>
+            <li><strong>Particle Velocity Update:</strong> The velocity of particles is updated considering their current velocity, personal best, and global best positions. This update guides particles towards promising regions in the feature space.</li>
+            <li><strong>Iterations:</strong> The algorithm iterates through a predefined number of cycles. In each iteration, particles evaluate fitness, update their positions based on velocity calculations, and refine their feature subsets.</li>
+            <li><strong>Boundary Handling:</strong> To ensure the feasibility of solutions, boundary conditions are enforced to prevent particles from exceeding the feature space limits.</li>
+            <li><strong>Global Best Update:</strong> The algorithm keeps track of the best-performing feature subset achieved by any particle, ensuring retention of the most promising solution found.</li>
+        </ol>        
+
+        <h2>Results</h2>
+        <p>The algorithm's progress is tracked by printing the accuracy of every individual in the population for each generation</p>
+
+        <pre>
+            <code>
+                0.0
+                0.0
+                0.6413571428571428
+                0.7983571428571429
+                0.7983571428571429
+                0.7983571428571429
+                ...
+                [264   4 355 234 503 430 449 608 214 283 201 783 378 349 439 322 382 540
+                 599 384 365 223 234 517 428 296 628 147]
+                
+                0.8077142857142857
+                0.8077142857142857
+                0.8077142857142857
+                ...
+                [273  12 361 240 512 435 455 610 220 292 210 783 379 349 443 330 391 544
+                 599 385 367 227 234 523 436 303 632 152]
+                
+                0.8116428571428571
+                0.8116428571428571
+                0.8116428571428571
+                ...
+                [295  67 380 287 448 458 457 540 215 320 299 718 397 344 422 344 370 492
+                 570 331 383 250 219 491 401 319 627 283]
+                
+                0.8157142857142857
+                0.8157142857142857
+                0.8157142857142857
+                ...
+                [295  67 380 287 448 458 457 540 215 320 299 718 397 344 422 344 370 492
+                 570 331 383 250 219 491 401 319 627 283]
+            
+                .
+                .
+                . 
+            </code>
+        </pre>
+
+        <!-- Image Section -->
+        <img src="\images\pso_accuracy.png" alt="PSO Image" width="467" height="300">
+
+        <p>The final selected features are printed:</p>
+
+        <pre>
+            <code>
+                Selected Features: [308, 210, 463, 278, 515, 276, 422, 494, 263, 350, 265, 500, 381, 325, 373,
+                292, 376, 408, 391, 239, 447, 373, 329, 435, 432, 420, 512, 377]
+            </code>
+        </pre>
+
+        <p>Using the selected features, a RandomForestClassifier is trained, and its accuracy on the test set is calculated:</p>
+
+        <pre>
+            <code>
+                X_train_subset = X_train.iloc[:, selected_features]
+                X_test_subset = X_test.iloc[:, selected_features]
+
+                clf = RandomForestClassifier(n_estimators=100, random_state=42)
+                clf.fit(X_train_subset, y_train)
+                y_pred = clf.predict(X_test_subset)
+                acc = accuracy_score(y_test, y_pred)
+            </code>
+        </pre>
+
+        <p>The final accuracy of the model is printed:</p>
+
+        <pre>
+            <code>
+                0.8570952380952381
+            </code>
+        </pre>
+
+        <p>Taking just : </p>
+
+        <pre>
+            <code>
+                24 seconds
+            </code>
+        </pre>
+
+
+        <h2>Visual Representation</h2>
+    
+        <p>We highlight the selected pixels which represent features in our problem to represent the learning capability of the algorithm in understanding the important features for a quicker and less computationally intensive classification</p>
+
+        <!-- Image Section -->
+        <img src="\images\pso.png" alt="PSO Image" width="200" height="200">
+
+        <!-- You can add more content here -->
+
+    </section>
+
+    <!-- Footer Section
+    <footer>
+        <p>&copy; 2023 Feature Selection AI Project</p>
+    </footer> -->
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulated Annealing - Feature Selection using Metaheuristic Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Simulated Annealing</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="algo1.html">Simulated Annealing</a>
+        <a href="algo2.html">Genetic Algorithm</a>
+        <a href="algo3.html">Particle Swarm Optimization</a>
+        <a href="algo4.html">Whale Optimization Algorithm</a>
+        <a href="algo5.html">Differential Evolution</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section id="algorithm1">
+        <h2>Introduction to Simulated Annealing</h2>
+        <p>Simulated Annealing is a probabilistic optimization algorithm inspired by annealing in metallurgy. It is used for finding an approximate solution to an optimization problem. The algorithm mimics the physical process of annealing, where a material is heated to a high temperature and then gradually cooled to remove defects, minimizing the overall energy of the system.</p>
+
+        <h2>Implementation Details</h2>
+        <p>In the provided implementation, Simulated Annealing is applied for feature selection in image classification tasks. Here's a high-level overview of the algorithm:</p>
+
+        <ol>
+            <li><strong>Initialize: </strong> Start with an initial solution, representing a set of selected features.</li>
+            <li><strong>Evaluation: </strong>Utilize the objective function (accuracy in this case) for the current solution.</li>
+            <li><strong>Iterations: </strong>Iteratively propose new solutions by randomly changing the selected features.</li>
+            <li><strong>Fitness:</strong>Calculate the objective function value for the new solution.</li>
+            <li><strong>Updation:</strong>Accept the new solution if it improves the objective function or with a certain probability if it's worse, controlled by a temperature parameter. Update the current solution if the new solution is accepted and track the best solution encountered.</li>
+            <li><strong>Convergence:</strong>Repeat the process for a specified number of iterations or until convergence.</li>
+        </ol>
+
+        <h2>Results</h2>
+        <p>The algorithm's progress is tracked by printing the accuracy of the model at various iterations:</p>
+
+        <pre>
+            <code>
+                0.6118095238095238
+                0.6118095238095238
+                0.6118095238095238
+                ...
+                ...
+                ...
+                ...
+                0.8723333333333333
+                0.8723333333333333
+                0.8723333333333333
+            </code>
+        </pre>
+
+        <!-- Image Section -->
+        <img src="\images\sim_anneal_accuracy.png" alt="Simulated Annealing Image" width="514 " height="400">
+
+        <p>The final selected features are printed:</p>
+
+        <pre>
+            <code>
+                Selected Features: [432 318 327 484 184 182 353 372 434 625 265 515 350 481 518
+                 656 237 241 595 289 244 130 154 439 541 321 324 149]
+            </code>
+        </pre>
+
+        <p>Using the selected features, a RandomForestClassifier is trained, and its accuracy on the test set is calculated:</p>
+
+        <pre>
+            <code>
+                X_train_subset = X_train.iloc[:, selected_features]
+                X_test_subset = X_test.iloc[:, selected_features]
+
+                clf = RandomForestClassifier(n_estimators=100, random_state=42)
+                clf.fit(X_train_subset, y_train)
+                y_pred = clf.predict(X_test_subset)
+                acc = accuracy_score(y_test, y_pred)
+            </code>
+        </pre>
+
+        <p>The final accuracy of the model is printed:</p>
+
+        <pre>
+            <code>
+                0.9250952380952381
+            </code>
+        </pre>
+
+        <p> With just 28 pixels out of a total 784 we acheive impressive accuracy of ~92 % , with a training time of just </p>
+        
+        <pre>
+            <code>
+                18.4 seconds
+            </code>
+        </pre>
+
+        <p> This is just around 3-4 % less than the accuracy obtained using all 784 features.</p>
+
+        <pre>
+            <code>
+                0.9667619047619047
+            </code>
+        </pre>
+
+        <p> Which takes around 3 times as long to train </p>
+
+        <pre>
+            <code>
+                54.2 seconds
+            </code>
+        </pre>
+
+        <h2>Visual Representation</h2>
+    
+        <p>We highlight the selected pixels which represent features in our problem to represent the learning capability of the algorithm in understanding the important features for a quicker and less computationally intensive classification</p>
+
+        <!-- Image Section -->
+        <img src="\images\sim_anneal.png" alt="Simulated Annealing Image" width="200" height="200">
+
+
+        <!-- You can add more content here -->
+
+    </section>
+
+    <!-- Footer Section
+    <footer>
+        <p>&copy; 2023 Feature Selection AI Project</p>
+    </footer> -->
+</body>
+
+</html>

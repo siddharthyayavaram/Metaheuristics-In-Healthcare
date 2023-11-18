@@ -26,8 +26,6 @@ monitoring and adaptation to evolving ethical concerns and societal norms. Ultim
 integrating these ethical principles into the feature selection process is fundamental to building
 models that are both effective and morally sound.
 
-Cited Research Papers
-
 1. https://ieeexplore.ieee.org/abstract/document/7346674
 
 2. https://www.sciencedirect.com/science/article/pii/S0010482522001366?casa_token=VYMiTi3YGWsAAAAA:HZShNcM_X8rue-ugqoJGD4z0hLMZEk9WnuXdd_oosb_Ff2RVyn5hdKD9u9lyvRp_4HNhnPZ7cQ

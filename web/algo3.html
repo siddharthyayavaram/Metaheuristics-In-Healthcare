@@ -132,6 +132,58 @@
 
         <!-- You can add more content here -->
 
+        <h1>Comparitive analysis of variations</h1>
+
+        <p> We explore variations where we now double the number of particles and number of iterations</p>
+
+        <p> We also remove the weight term which we were multiplying into velocity to allow for larger jumps</p>
+
+        <pre>
+            <code>
+                w= w_max - ((w_max - w_min) * iteration) / num_iterations
+            </code>
+        </pre>
+
+        <p>We notice that there are initial large jumps but as the solutions converge the benefits are lost </p>
+
+        <p>The final accuracy of the model using the entire training set and 100 trees in the random forest is printed:</p>
+
+        <pre>
+            <code>
+                0.8849523809523809
+            </code>
+        </pre>
+
+        <p>This jump in accuracy is due to the increased number of iterations,particles and also the ability to explore longer</p>
+
+        <pre>
+            <code>
+                precision    recall  f1-score   support
+
+                0       0.94      0.94      0.94      2058
+                1       0.96      0.98      0.97      2364
+                2       0.87      0.90      0.88      2133
+                3       0.88      0.85      0.87      2176
+                4       0.88      0.88      0.88      1936
+                5       0.83      0.82      0.82      1915
+                6       0.90      0.92      0.91      2088
+                7       0.90      0.88      0.89      2248
+                8       0.85      0.84      0.84      1992
+                9       0.82      0.83      0.83      2090
+     
+         accuracy                           0.88     21000
+        macro avg       0.88      0.88      0.88     21000
+     weighted avg       0.88      0.88      0.88     21000
+            </code>
+        </pre> 
+
+        <!-- You can add more content here -->
+
+        <p>Selected Pixels</p>
+
+        <!-- Image Section -->
+        <img src="\images\pso_var.png" alt="Genetic Algorithm Image" width="200" height="200">
+
     </section>
 
     <!-- Footer Section

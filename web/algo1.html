@@ -117,6 +117,29 @@
             </code>
         </pre>
 
+        <p>To view other metrics of classification we print the classification report</p>
+
+        <pre>
+            <code>
+                precision    recall  f1-score   support
+
+                0       0.96      0.97      0.96      2058
+                1       0.97      0.98      0.97      2364
+                2       0.91      0.92      0.92      2133
+                3       0.91      0.90      0.91      2176
+                4       0.93      0.92      0.92      1936
+                5       0.90      0.90      0.90      1915
+                6       0.94      0.96      0.95      2088
+                7       0.93      0.93      0.93      2248
+                8       0.89      0.86      0.87      1992
+                9       0.88      0.90      0.89      2090
+     
+         accuracy                           0.92     21000
+        macro avg       0.92      0.92      0.92     21000
+     weighted avg       0.92      0.92      0.92     21000
+            </code>
+        </pre> 
+
         <h2>Visual Representation</h2>
     
         <p>We highlight the selected pixels which represent features in our problem to represent the learning capability of the algorithm in understanding the important features for a quicker and less computationally intensive classification</p>
@@ -125,7 +148,47 @@
         <img src="\images\sim_anneal.png" alt="Simulated Annealing Image" width="200" height="200">
 
 
+        <h1>Comparitive analysis of variations</h1>
+
+        <p> We explore variations where we Initialize Temperature as 100 and cooling rate as 0.9</p>
+
+        <p>The final accuracy of the model using the entire training set and 100 trees in the random forest is printed:</p>
+
+        <pre>
+            <code>
+                0.9301904761904762
+            </code>
+        </pre>
+
+        <pre>
+            <code>
+                precision    recall  f1-score   support
+
+                0       0.96      0.96      0.96      2058
+                1       0.97      0.98      0.97      2364
+                2       0.91      0.93      0.92      2133
+                3       0.93      0.91      0.92      2176
+                4       0.93      0.93      0.93      1936
+                5       0.91      0.90      0.91      1915
+                6       0.96      0.96      0.96      2088
+                7       0.92      0.92      0.92      2248
+                8       0.92      0.90      0.91      1992
+                9       0.89      0.90      0.89      2090
+     
+         accuracy                           0.93     21000
+        macro avg       0.93      0.93      0.93     21000
+     weighted avg       0.93      0.93      0.93     21000
+            </code>
+        </pre> 
+
+        <p>We varied initial temperature from 1.0 to 100.0 and the cooling rate from 0.95 to 0.9 and we observe that as cooling rate decrease and initial temperature increases, the algorithm is able to explore more of the search space. We allowed it to explore more of the search space and therefore it achieves accuracy of 93%, a slight increase over the previous value of 92%. However we did not allow it to converge to keep the runtime of both versions the same and therefore with a higher number of iterations there would be a larger increase in accuracy.</p>
+
         <!-- You can add more content here -->
+
+        <p>Selected Pixels</p>
+
+        <!-- Image Section -->
+        <img src="\images\sim_var.png" alt="Genetic Algorithm Image" width="200" height="200">
 
     </section>
 

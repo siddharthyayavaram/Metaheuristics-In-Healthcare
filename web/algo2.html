@@ -99,7 +99,7 @@
             </code>
         </pre>
 
-        <p>The final accuracy of the model is printed:</p>
+        <p>The final accuracy of the model is :</p>
 
         <pre>
             <code>
@@ -115,6 +115,29 @@
             </code>
         </pre>
 
+        <p>To view other metrics of classification we print the classification report</p>
+
+        <pre>
+            <code>
+                    precision    recall  f1-score   support
+
+                0       0.94      0.95      0.94      2058
+                1       0.95      0.97      0.96      2364
+                2       0.86      0.86      0.86      2133
+                3       0.85      0.86      0.86      2176
+                4       0.86      0.87      0.86      1936
+                5       0.86      0.84      0.85      1915
+                6       0.90      0.94      0.92      2088
+                7       0.92      0.90      0.91      2248
+                8       0.87      0.80      0.83      1992
+                9       0.84      0.85      0.85      2090
+     
+         accuracy                           0.89     21000
+        macro avg       0.88      0.88      0.88     21000
+     weighted avg       0.89      0.89      0.89     21000
+            </code>
+        </pre> 
+
 
         <h2>Visual Representation</h2>
     
@@ -123,7 +146,95 @@
         <!-- Image Section -->
         <img src="\images\ga.png" alt="Genetic Algorithm Image" width="200" height="200">
 
+        <h1>Comparitive analysis of variations</h1>
+
+        <p> We also conduct variations of our algorithm by modifying the crossover function as mentioned</p>
+
+        <ol>
+            <li>Enhanced mutation with rate = 0.1</li>
+            <li>2-point crossover </li>
+            <li>Uniform crossover</li>
+        </ol>
+
+        <h2>Enhanced mutation</h2>
+
+        <p>The final accuracy of the model using the entire training set and 100 trees in the random forest is printed:</p>
+
+        <pre>
+            <code>
+                0.91933
+            </code>
+        </pre>
+
+        <p>Classification Report</p>
+
+        <pre>
+            <code>
+                    precision    recall  f1-score   support
+
+                0       0.94      0.94      0.94      2058
+                1       0.94      0.97      0.96      2364
+                2       0.88      0.89      0.89      2133
+                3       0.88      0.87      0.88      2176
+                4       0.89      0.88      0.88      1936
+                5       0.87      0.85      0.86      1915
+                6       0.91      0.94      0.92      2088
+                7       0.93      0.91      0.92      2248
+                8       0.85      0.84      0.85      1992
+                9       0.88      0.87      0.87      2090
+        
+         accuracy                           0.91     21000
+        macro avg       0.90      0.90      0.91     21000
+     weighted avg       0.90      0.90      0.91     21000
+            </code>
+        </pre> 
+
+        <p>Selected Pixels</p>
+
+        <!-- Image Section -->
+        <img src="\images\ga_mutation.png" alt="Genetic Algorithm Image" width="200" height="200">
+
+        <h2>2-point</h2>
+
+        <p>The final accuracy of the model using the entire training set and 100 trees in the random forest is printed:</p>
+
+        <pre>
+            <code>
+                0.8772857142857143
+            </code>
+        </pre>
+
+        <p>The accuracy plot: </p>
+
+        <img src="\images\ga_2_point_acc.png" alt="Genetic Algorithm Image" width="625" height="400">
+
+        <p>Selected Pixels</p>
+
+        <!-- Image Section -->
+        <img src="\images\ga_2_point.png" alt="Genetic Algorithm Image" width="200" height="200">
+
+        <h2>Uniform</h2>
+
+        <p>The final accuracy of the model using the entire training set and 100 trees in the random forest is printed:</p>
+
+        <pre>
+            <code>
+                0.90093342243
+            </code>
+        </pre>
+
+        <p>The accuracy plot: </p>
+
+        <img src="\images\ga_uniform_accuracy.png" alt="Genetic Algorithm Image" width="625" height="400">
+
+        <p>Selected Pixels</p>
+
+        <!-- Image Section -->
+        <img src="\images\ga_uniform.png" alt="Genetic Algorithm Image" width="200" height="200">
+
         <!-- You can add more content here -->
+
+    
 
     </section>
 
